@@ -32,6 +32,8 @@ public class Graph {
     }
 
     public void passInWidth(int index) {
-
+        System.out.println(vertexList[index].name);
+        vertexList[index].isVisited = true;
+        queue.add(index);
     }
 }

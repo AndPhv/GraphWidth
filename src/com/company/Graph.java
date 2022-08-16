@@ -35,5 +35,20 @@ public class Graph {
         System.out.println(vertexList[index].name);
         vertexList[index].isVisited = true;
         queue.add(index);
+
+        int vertex;
+
+        while (!queue.isEmpty()) {
+            int temp = queue.remove();
+
+            while ((vertex = check(temp)) != -1) {
+                System.out.println(vertexList[vertex].name);
+                vertexList[vertex].isVisited = true;
+                queue.add(vertex);
+            }
+        }
+        for (int i = 0; i < currentV; i++) {
+            vertexList[i].isVisited = false;
+        }
     }
 }

@@ -5,6 +5,7 @@ public class Graph {
     private int[][] matrix;
     Vertex[] vertexList;
     private int currentV;
+    private GraphQueue queue = new GraphQueue();
 
 
     public Graph() {
@@ -28,5 +29,9 @@ public class Graph {
                 return i;
         }
         return -1;
+    }
+
+    public void passInWidth(int index) {
+
     }
 }
